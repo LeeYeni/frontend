@@ -4,9 +4,15 @@ import StudyContainer from "../components/StudyContainer";
 import { useState, useEffect } from "react"
 
 export default function StudyPage() {
-    const wordsString = localStorage.getItem("words")
-    const words = wordsString ? JSON.parse(wordsString): [];
+    const [words, setWords] = useState<any[]>([]);
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+      const wordsString = localStorage.getItem("words");
+      if (wordsString) {
+        setWords(JSON.parse(wordsString));
+      }
+    }, []);
 
     return (
         <main className="flex flex-row space-x-2 sm:space-x-4 md:space-x-8 justify-center items-center w-full h-full py-8">
