@@ -14,6 +14,16 @@ export default function StudyPage() {
       }
     }, []);
 
+    const current = words[index];
+
+    if (!current) {
+      return (
+        <main className="w-full h-full flex justify-center items-center">
+          <div className="text-lg text-gray-500">단어를 불러오는 중...</div>
+        </main>
+      );
+    }
+
     return (
         <main className="flex flex-row space-x-2 sm:space-x-4 md:space-x-8 justify-center items-center w-full h-full py-8">
             <button
