@@ -19,7 +19,7 @@ export default function RootLayout({ children } : { children: ReactNode}) {
       <body className="h-screen flex flex-col">
         <Header/>
 
-        <main className="flex flex-1 px-4 sm:px-6 md:px-8 bg-[#FAFAFA] justify-center items-center max-w-full max-h-full">
+        <main className="flex flex-1 px-4 sm:px-6 md:px-8 bg-[#FAFAFA] text-gray-800 justify-center items-center max-w-full max-h-full">
           {children}
         </main>
 

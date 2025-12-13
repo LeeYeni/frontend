@@ -47,26 +47,28 @@ export default function Home() {
       </div>
 
       <div className="text-gray-500">
-        {file ? file.name + "파일이 업로드되었습니다." : "PNG 또는 JPG 파일 업로드"}
+        {file ? "파일이 업로드되었습니다." : "PNG 또는 JPG 파일 업로드"}
       </div>
       </label>
 
-      <button
-        className={`px-8 py-4 font-bold text-xl rounded-lg shadow-lg transition
-        ${file
-          ? "bg-rose-500 text-white hover:bg-rose-600 cursor-pointer"
-          : "bg-gray-300 text-gray-500 cursor-not-allowed"
-        }`}
-        onClick={() => {
-          if (!file) {
-            alert("사진을 업로드해주세요!")
-            return;
-          }
-          router.push("/loading");
-        }}
-      >
-        학습하기
-      </button>
+      <div className="flex flex-row space-x-8">
+        <button
+          className={`px-8 py-4 font-bold text-xl rounded-lg shadow-lg transition
+          ${file
+            ? "bg-rose-500 text-white hover:bg-rose-600 cursor-pointer"
+            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+          }`}
+          onClick={() => {
+            if (!file) {
+              alert("사진을 업로드해주세요!")
+              return;
+            }
+            router.push("/loading");
+          }}
+        >
+          학습하기
+        </button>
+      </div>
     </div>
   );
 }
