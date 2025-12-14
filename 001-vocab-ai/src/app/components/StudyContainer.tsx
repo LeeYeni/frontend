@@ -16,7 +16,7 @@ export default function StudyContainer({
                 <div>
                   {word}
                 </div>
-                <div className="bg-rose-500 h-1 rounded-full"></div>
+                <div className="bg-[#fd3c3c] h-1 rounded-full"></div>
             </div>
             <div className="py-4 flex flex-col space-y-4">
               <div>

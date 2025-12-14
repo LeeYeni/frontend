@@ -6,20 +6,20 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: {
-    default: "영어 학습 도우미",
-    template: "영어 학습 도우미"
+  title: "JupJup",
+  description: "찍고, 줍고, 즐기는 나만의 영어 단어장",
+  icons: {
+    icon: "/jupjup_logo.jpg", // 탭에 뜨는 아이콘(파비콘) 설정
   },
-  description: "LLM과 영어 단어를 쉽게 암기하는 공간"
 };
 
 export default function RootLayout({ children } : { children: ReactNode}) {
   return (
     <html lang="ko">
-      <body className="h-screen flex flex-col">
+      <body className="flex flex-col min-h-screen">
         <Header/>
 
-        <main className="flex flex-1 px-4 sm:px-6 md:px-8 bg-[#FAFAFA] text-gray-800 justify-center items-center max-w-full max-h-full">
+        <main className="flex flex-1 px-4 sm:px-6 md:px-8 bg-[#FAFAFA] rounded-2xl overflow-hidden text-gray-800 justify-center items-center max-w-full max-h-full">
           {children}
         </main>
 
