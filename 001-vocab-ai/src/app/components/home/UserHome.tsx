@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useFileStore } from "@/stores/useFileStore";
+import { useFileStore } from "@/store/useFileStore";
 
 export default function Home() {
   const router = useRouter();
